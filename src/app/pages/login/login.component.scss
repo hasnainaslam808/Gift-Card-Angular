@@ -7,12 +7,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 15px 0; 
+    margin: 15px 0;
 }
-@mixin heading{
+
+@mixin heading {
     font-weight: 700;
 }
-@mixin button{
+
+@mixin button {
     width: 100%;
     height: 56px;
     background: linear-gradient(rgba(175, 79, 239, 1), rgba(126, 15, 198, 1));
@@ -21,6 +23,16 @@
     border-radius: 10px;
     color: white;
 }
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+}
+
+
 
 .left-div img {
     width: 100%;
@@ -32,74 +44,123 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    .gift-logo{
+
+    .gift-logo {
         display: flex;
         align-items: start;
         justify-content: start;
-        img{
+
+        img {
             object-fit: cover;
         }
     }
 }
 
 .login-section {
-    h3{
+    margin: 80px auto 0 auto;
+    // width: 406px;
+    width: 80%;
+ 
+
+    h3 {
         @include heading();
     }
-    p{
-      color:   rgba(128, 141, 158, 1);
+
+    p {
+        color: rgba(128, 141, 158, 1);
     }
-  
-    margin: 80px auto 0 auto ;
-    width: 406px;
 
     input {
-
         border: none;
         outline: none;
-     
-
     }
 
     .input {
         border: 1px solid rgba(226, 232, 240, 1);
         border-radius: 10px;
-        padding: 8px 16px 8px 16px;
-        gap: 12px;
+        padding: 8px 0 8px 4px;
+       
         margin: 15px 0 0 0;
-        img{
+
+        img {
             margin-inline-end: 8px
         }
     }
 
     .password {
         @include flex();
-  
-    
     }
 
     .Remember {
         @include flex();
-        input{
+
+        input {
             margin-inline-end: 8px;
-         accent-color: rgb(126, 15, 198);
+            accent-color: rgb(126, 15, 198);
         }
-        p{
-            color: rgb(126, 15, 198);;
+
+        p {
+            color: rgb(126, 15, 198);
         }
-     
     }
-    .continue{
+
+    .continue {
         margin: 20px 0;
     }
-    .back{
-        p{
+
+    .back {
+        p {
             @include heading();
             text-align: center;
             color: black;
         }
     }
-    button{
-     @include button()
+
+    button {
+        @include button();
+        @include heading();
     }
 }
+.again{
+    text-align: center;
+    p{
+        margin: 13px 0 13px 0;
+    }
+}
+
+@media (max-width: 860px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    .input{
+        // padding: 8px 0px 8px 3px;
+        padding-right: 0;
+        padding-left: 2px;
+        
+    }
+
+}
+
+// @media (max-width: 960px) {
+//    .login-section{
+//     margin: 80px 15px 0 15px;
+//    }
+// }
+// @media (max-width: 860px) {
+//    .login-section{
+//     margin: 80px auto 0 auto;
+//    }
+// }
+// @media (max-width: 460px) {
+//     .login-section{
+//      margin: 80px 25px 0 25px;
+//     //  width: 310px;
+//     }
+
+//  }

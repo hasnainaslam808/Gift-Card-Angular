@@ -1,17 +1,17 @@
 <div class="container-fluid">
     <div class="row justify-content-center algin-items-center">
-        <div class="col-md-6">
+        <div class=" left" >
             <div class="left-div">
                 <img src="assets/auth.png" alt="">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="right" >
             <div class="logo ">
                 <div class="col-md-3 col-12 gift-logo">
                     <img src="assets/Group 6956.png" alt="" height="54px">
                 </div>
-                <div class="col-md-9 col-12">
-                    <img src="assets/Rectangle 6486.png" alt="" width="100%" height="5px">
+                <div class="">
+                    <img src="assets/Rectangle 6486.png" alt="" width="90%" height="5px">
                 </div>
             </div>
 
@@ -41,21 +41,46 @@
             </div>
             <div class="login-section" *ngIf="currentRoute==='reset'">
                 <h3>Reset your password</h3>
-                <p>Enter the email address associated with your account and we will send you a link to reset your password.</p>
+                <p>Enter the email address associated with your account and we will send you a link to reset your
+                    password.</p>
                 <div class="input">
                     <img src="assets/Group.png" alt="" width="24px" height="24px">
                     <input type="text" placeholder="Enter Your Email">
                 </div>
                 <button class="btn continue">Continue</button>
                 <div class="back">
-                    <p><a >Back to Sign In</a></p>
+                    <p><a>Back to Sign In</a></p>
                 </div>
-               
+
             </div>
-<div class="login-section" *ngIf="currentRoute==='again'">
+            <div class="login-section again" *ngIf="currentRoute==='again'">
+                <div>
+                    <img src="assets/gift.png" alt="" width="150px" height="132px">
+                </div>
+                <h3>Check your Email</h3>
+                <p>Thank you, check your email for instructions to reset your password</p>
+                <p style="font-weight: 500; color: black;">Don’t receive an email? <span style="color: rgb(126, 15, 198); cursor: pointer;"><a>Resend</a></span> </p>
 
-</div>
-
+            </div>
+            <div class="login-section" *ngIf="currentRoute==='new'">
+                <h3>Reset your Password</h3>
+                <p>Please enter your new password and confirm password</p>
+                <div class="input password">
+                    <div>
+                        <img src="assets/lock.png" alt="" width="24px" height="24px">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <img src="assets/Group (1).png" alt="" width="24px" height="24px">
+                </div>
+                <div class="input password">
+                    <div>
+                        <img src="assets/lock.png" alt="" width="24px" height="24px">
+                        <input type="password" placeholder="Confirm Password">
+                    </div>
+                    <img src="assets/Group (1).png" alt="" width="24px" height="24px">
+                </div>
+                <button class="btn">Confirm</button>
+            </div>
         </div>
     </div>
 </div>
