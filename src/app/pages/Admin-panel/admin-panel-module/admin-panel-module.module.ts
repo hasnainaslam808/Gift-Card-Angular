@@ -5,18 +5,22 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { UsersComponent } from './users/users.component';
+import { OrdersComponent } from './orders/orders.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     CategoriesComponent,
     UsersComponent,
+    OrdersComponent,
+    FilterComponent,
     
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', component:UsersComponent }
+      { path: '', component:OrdersComponent }
 
     ])
   ]
