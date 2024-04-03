@@ -1,9 +1,9 @@
+
 <main>
     <div class="label">
-        <h3>Categories</h3>
-        <button class="btn">Add New Category</button>
+        <h3>Users</h3>
     </div>
-    <div style="background-color: white;">
+    <div style="background-color: white; ">
         <div class="searchbar">
             <input type="text" placeholder="Search by Name">
             <button class="btn">Search</button>
@@ -15,8 +15,9 @@
                 <thead>
                     <tr>
                         <th>Sr No</th>
-                        <th>Category Image</th>
-                        <th>Category Name</th>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Phone no</th>
                         <th></th>
                         <th></th>
                         <th></th>
@@ -32,8 +33,9 @@
 
                     <tr class="image-cell" *ngFor="let item of tableData">
                         <td>{{item.id}}</td>
-                        <td><img [src]="item.img" alt="" width="35px" height="35px"></td>
-                        <td> {{item.name}}</td>
+                        <td>{{item.name}}</td>
+                        <td> {{item.email}}</td>
+                        <td> {{item.phone}}</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -43,8 +45,8 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <div class="bin"><img src="assets/pencil.png" alt="" width="35px" height="35px"> <img
-                                    src="assets/bin.png" alt="" width="35px" height="35px"></div>
+                            <div class="bin"><img src="assets/eye.png" alt="" width="35px" height="35px"> <img
+                                    src="../../../../../assets/Group 1597883370.svg" alt="" width="35px" height="35px"></div>
                         </td>
                     </tr>
 
