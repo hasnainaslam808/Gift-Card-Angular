@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<main>
+    <div class="left" *ngIf="true">
+        <app-sidenavbar></app-sidenavbar>
+        <!-- SIDEBAR -->
+    </div>
+
+    <div class="right">
+        <div class="top" *ngIf="true">
+            <!-- HEADER -->
+        </div>
+        <div class="bottom">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</main>
+
