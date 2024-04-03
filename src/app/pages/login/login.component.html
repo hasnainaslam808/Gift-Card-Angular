@@ -1,11 +1,12 @@
 <div class="container-fluid">
     <div class="row justify-content-center algin-items-center">
-        <div class=" left" >
+        <div class=" left">
             <div class="left-div">
                 <img src="assets/auth.png" alt="">
             </div>
+    
         </div>
-        <div class="right" >
+        <div class="right">
             <div class="logo ">
                 <div class="col-md-3 col-12 gift-logo">
                     <img src="assets/Group 6956.png" alt="" height="54px">
@@ -15,71 +16,100 @@
                 </div>
             </div>
 
+
+            <!-- login -->
             <div class="login-section" *ngIf="currentRoute==='login'">
                 <h3>Login to your Account</h3>
                 <p>Welcome back! please enter your detail</p>
-                <div class="input">
-                    <img src="assets/Group.png" alt="" width="24px" height="24px">
-                    <input type="text" placeholder="Email">
-                </div>
-                <div class="input password">
-                    <div>
-                        <img src="assets/lock.png" alt="" width="24px" height="24px">
-                        <input type="password" placeholder="Password">
-                    </div>
-                    <img src="assets/Group (1).png" alt="" width="24px" height="24px">
-                </div>
-                <div class="Remember">
-                    <div>
-                        <input type="checkbox"><span>Remember me</span>
-                    </div>
 
-                    <p>Forgot Password?</p>
+                <form #loginForm="">
+                    <div class="input">
+                        <img src="assets/Group.png" alt="" width="24px" height="24px">
+                        <input type="text" placeholder="Email" ngModel required name="email">
+                    </div>
+                    <div class="input password">
+                        <div>
+                            <img src="assets/lock.png" alt="" width="24px" height="24px">
+                            <input [type]="showPassword ? 'text' : 'password'" placeholder="Password" #passwordField name="password"
+                            [(ngModel)]="password" name="password" required >
+                        </div>
+                        <img [src]="showPassword ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt="" (click)="togglePasswordVisibility()" width="24px" height="24px">
+                    </div>
+                    <div class="Remember">
+                        <div>
+                            <input type="checkbox"><span>Remember me</span>
+                        </div>
 
-                </div>
-                <button class="btn">Login</button>
+                        <p><a routerLink="/reset-password" >Forgot Password?</a> </p>
+
+                    </div>
+                    <button class="btn" routerLink="/dashboard">Login</button>
+                </form>
+
             </div>
-            <div class="login-section" *ngIf="currentRoute==='reset'">
+
+            <!-- reset -->
+            <div class="login-section" *ngIf="currentRoute==='reset-password'">
                 <h3>Reset your password</h3>
                 <p>Enter the email address associated with your account and we will send you a link to reset your
                     password.</p>
-                <div class="input">
-                    <img src="assets/Group.png" alt="" width="24px" height="24px">
-                    <input type="text" placeholder="Enter Your Email">
-                </div>
-                <button class="btn continue">Continue</button>
-                <div class="back">
-                    <p><a>Back to Sign In</a></p>
-                </div>
+
+
+                <form>
+                    <div class="input">
+                        <img src="assets/Group.png" alt="" width="24px" height="24px">
+                        <input type="text" placeholder="Enter Your Email">
+                    </div>
+                    <button class="btn continue" routerLink="/emial-verification">Continue</button>
+                    <div class="back">
+                        <p><a>Back to Sign In</a></p>
+                    </div>
+                </form>
 
             </div>
-            <div class="login-section again" *ngIf="currentRoute==='again'">
+
+
+            <!-- again -->
+            <div class="login-section again" *ngIf="currentRoute==='emial-verification'">
                 <div>
                     <img src="assets/gift.png" alt="" width="150px" height="132px">
                 </div>
                 <h3>Check your Email</h3>
                 <p>Thank you, check your email for instructions to reset your password</p>
-                <p style="font-weight: 500; color: black;">Don’t receive an email? <span style="color: rgb(126, 15, 198); cursor: pointer;"><a>Resend</a></span> </p>
+                <p style="font-weight: 500; color: black;">Don’t receive an email? <span
+                        style="color: rgb(126, 15, 198); cursor: pointer;"><a>Resend</a></span> </p>
 
             </div>
-            <div class="login-section" *ngIf="currentRoute==='new'">
+
+
+
+            <!-- new -->
+            <div class="login-section" *ngIf="currentRoute==='/set-new-password'">
                 <h3>Reset your Password</h3>
                 <p>Please enter your new password and confirm password</p>
-                <div class="input password">
-                    <div>
-                        <img src="assets/lock.png" alt="" width="24px" height="24px">
-                        <input type="password" placeholder="Password">
+
+                <form #resetPassword="ngForm" (ngSubmit)="getPasswordValues(passwordField1.value)">
+                    <div class="input password">
+                        <div>
+                            <img src="assets/lock.png" alt="" width="24px" height="24px">
+                            <input [type]="showPassword1 ? 'text' : 'password'" #passwordField1="ngModel" placeholder="Password" name="newPassword" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
+                            minlength="8" ngModel required>
+                        </div>
+                        <img [src]="showPassword1 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt="" (click)="togglePasswordVisibility1()" width="24px" height="24px">
                     </div>
-                    <img src="assets/Group (1).png" alt="" width="24px" height="24px">
-                </div>
-                <div class="input password">
-                    <div>
-                        <img src="assets/lock.png" alt="" width="24px" height="24px">
-                        <input type="password" placeholder="Confirm Password">
+                    <span *ngIf="passwordField1.invalid && passwordField1.touched " class="text-danger" style="font-size: 12px;">use capital,small letter and numbers</span>
+                    <div class="input password">
+                        <div>
+                            <img src="assets/lock.png" alt="" width="24px" height="24px">
+                            <input [type]="showPassword2 ? 'text' : 'password'" placeholder="Confirm Password" #passwordField2="ngModel" name="confirmPassword" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
+                            minlength="8" ngModel required>
+                        </div>
+                        <img [src]="showPassword2 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt="" (click)="togglePasswordVisibility2()" width="24px" height="24px">
                     </div>
-                    <img src="assets/Group (1).png" alt="" width="24px" height="24px">
-                </div>
-                <button class="btn">Confirm</button>
+                    <span *ngIf="passwordField2.touched && passwordField1.value !== passwordField2.value" class="text-danger" style="font-size: 12px;">Password not matched</span>
+                    <button type="submit" class="btn" [disabled]="resetPassword.invalid">Confirm</button>
+                </form>
+
             </div>
         </div>
     </div>
