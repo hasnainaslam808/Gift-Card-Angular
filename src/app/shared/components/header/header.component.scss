@@ -1,0 +1,27 @@
+.mainpage {
+    display: flex;
+    flex-direction: row;
+    }
+
+
+    // header
+    .header {
+        height: 90px;
+        width: 100%;
+        background-color: rgb(245, 246, 248);
+
+
+        .group {
+            width: 225px;
+            border: 1px solid rgba(226, 232, 240, 1);
+            border-radius: 5px;
+            margin: 0 35px;
+        }
+    }
+
+  
+
+li:hover {
+    background-color: rgb(126, 15, 198);
+    border-radius: 5px;
+}

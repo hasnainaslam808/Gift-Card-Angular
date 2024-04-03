@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SidenavbarComponent } from './shared/components/sidenavbar/sidenavbar.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { SidenavbarComponent } from './shared/components/sidenavbar/sidenavbar.c
     AppComponent,
     LoginComponent,
     SidenavbarComponent,
+    HeaderComponent,
 
     
   ],
