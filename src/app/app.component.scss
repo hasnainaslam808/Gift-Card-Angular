@@ -1,10 +1,28 @@
-main{
+main {
     display: flex;
- 
+    height: 100vh; /* Ensure the main container takes up the full viewport height */
 }
 
-.top{
+.left {
+    width: 250px; /* Fixed width for the sidebar */
+    position: fixed; /* Fix the sidebar position */
+    top: 0;
+    bottom: 0; /* Occupy the full height of the viewport */
+    overflow-y: auto; /* Allow vertical scrolling for the sidebar */
+}
+
+.right {
+    flex: 1; /* Let the right content take up remaining space */
+    overflow-x: auto; /* Allow horizontal scrolling for the right content */
+}
+
+.top {
     height: 90px;
     width: 100%;
-    background-color: rgb(245, 246, 248);
+    /* Other styles for the top content */
+}
+
+.bottom {
+    /* Styles for the bottom content */
+    background-color: rgb(245, 246, 247);
 }
