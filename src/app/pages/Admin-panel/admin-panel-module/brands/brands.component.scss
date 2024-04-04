@@ -91,3 +91,48 @@ main {
         font-weight: 700;
     }
 }
+
+// modal
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap :15px;
+    input{
+        height: 50px;
+        border: none;
+        outline: none;
+        background-color: rgb(249, 249, 249);
+    }
+}
+
+.heading {
+    display: flex;
+    height: 55px;
+    background-color: rgba(17, 0, 54, 1);
+    border-radius: 7px 7px 0px 0px;
+
+    h5 {
+
+        color: white;
+        width: 94%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    button {
+        outline: none;
+        color: white;
+        border: none;
+        background-color: rgb(17, 0, 54);
+        font-size: xx-large;
+    }
+
+}
+.btn {
+    background-color: rgba(126, 15, 198, 1);
+    color: white;
+    margin: 10px auto;
+    width: 90%;
+    height: 60px;
+}

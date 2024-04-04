@@ -10,6 +10,8 @@ import { FilterComponent } from './filter/filter.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { GiftCardsComponent } from './gift-cards/gift-cards.component';
 import { BrandsComponent } from './brands/brands.component';
+import { PoliciesComponent } from './policies/policies.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { BrandsComponent } from './brands/brands.component';
     FilterComponent,
     GiftCardsComponent,
     BrandsComponent,
+    PoliciesComponent,
+    NotificationsComponent,
     
   ],
   imports: [
