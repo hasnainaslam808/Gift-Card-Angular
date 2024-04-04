@@ -1,3 +1,10 @@
+@import '../users/users.component.scss';
+@mixin buttons{
+    width: 154px;
+    height: 63px;
+    border-radius: 16px 16px 0px 0px;
+    border: none;
+}
 main {
     margin-left: 250px;
 
@@ -14,6 +21,34 @@ main {
     }
 
 }
+.searchbar{
+    padding: 10px;
+    @include bar();
+      input{
+        @include input();
+  
+      }
+      button{
+        @include button();
+      }
+  }
+
+  .categories-btn{
+    display: flex;
+    gap: 5px;
+    margin: 10px 0 0 20px;
+    .Categories{
+        background-color: rgba(17, 0, 54, 1);
+        color: white;
+        @include buttons();
+    }
+    .Uncategories{
+        background-color: white;
+        color: black;
+        @include buttons();
+    }
+ 
+  }
 
 .label {
     padding: 15px 0 0 25px;

@@ -1,15 +1,11 @@
 <main>
     <div class="label">
-        <h3>Orders</h3>
+        <h3>Gift Cards</h3>
     </div>
     <div class="filter">
         <app-filter></app-filter>
     </div>
 
-
-    <div class="order-history">
-        <h6>Order History</h6>
-    </div>
     <div class="table-div">
 
         <table class="table">
@@ -17,17 +13,14 @@
                 <tr>
                     <th>Sr No</th>
                     <th>Card ID</th>
-                    <th>Purchased Date</th>
-                    <th>Users</th>
                     <th>Brand</th>
+                    <th></th>
+                    <th></th>
                     <th>Amount</th>
-                    <th>Gift For</th>
                     <th></th>
                     <th></th>
-                    <th></th>
-                    <th></th>
-
-                    <th>Status</th>
+                    <th>Country Name</th>
+                
                 </tr>
             </thead>
             <tbody>
@@ -35,20 +28,16 @@
                 <tr class="image-cell" *ngFor="let item of tableData | paginate:{itemsPerPage:pageSize,currentPage:currentPage}; let i=index">
                     <td>{{i+1 +(pageSize*(currentPage-1))}}</td>
                     <td>{{item.cardID}}</td>
-                    <td> {{item.email}}</td>
-                    <td> {{item.users}}</td>
                     <td> {{item.brand}}</td>
+                 <td></td>
+                 <td></td>
                     <td> {{item.amount}}</td>
-                    <td> {{item.giftfor}}</td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td> {{item.country}}</td>
+            
 
-                    <td>
-                        <div class="bin"><img src="assets/Group 1597883372.svg" alt="" width="35px"
-                                height="35px"><span><button class="btn">Available</button></span></div>
-                    </td>
+    
                 </tr>
 
 
