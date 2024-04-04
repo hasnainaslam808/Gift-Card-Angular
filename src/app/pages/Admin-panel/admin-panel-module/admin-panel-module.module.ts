@@ -12,6 +12,8 @@ import { GiftCardsComponent } from './gift-cards/gift-cards.component';
 import { BrandsComponent } from './brands/brands.component';
 import { PoliciesComponent } from './policies/policies.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SettingComponent } from './setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { NotificationsComponent } from './notifications/notifications.component'
     BrandsComponent,
     PoliciesComponent,
     NotificationsComponent,
+    ProfileComponent,
+    SettingComponent,
     
   ],
   imports: [
     CommonModule,
     NgxPaginationModule,
     RouterModule.forChild([
-      { path: '', component:BrandsComponent }
+      { path: '', component:SettingComponent }
 
     ])
   ]

@@ -1,0 +1,24 @@
+
+main{
+    margin-left: 250px;
+}
+.notification{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    background-color: white;
+    padding: 10px 20px 0 20px;
+  
+}
+.message{
+    h5{
+        color: rgba(126, 15, 198, 1);
+    }
+    p{
+        color: rgba(128, 141, 158, 1);
+        font-size: 14px;
+        font-weight: 400;
+    }
+}

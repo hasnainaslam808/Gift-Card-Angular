@@ -1,0 +1,95 @@
+@mixin font{
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+}
+@mixin input{
+    border: 1px solid rgba(226, 232, 240, 1);
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    height: 55px;
+}
+@mixin btn{
+    width: 170px;
+    background-color: rgba(126, 15, 198, 1);
+    color: white;
+    font-weight: 700;
+    margin: 10px 30px 0 0;
+    height: 50px;
+    border-radius: 12px;
+}
+
+main {
+    margin-left: 250px;
+}
+
+.label {
+    h3 {
+        margin: 20px;
+    }
+
+    button {
+     @include btn();
+    }
+
+    display: flex;
+    justify-content: space-between;
+
+    // profile section
+
+}
+
+.profile-section {
+    background-color: white;
+
+    button {
+    
+        color: rgba(126, 15, 198, 1);
+        font-size: 24px;
+        font-weight: 500;
+        border: none;
+        background: white;
+        border-bottom: 3px solid rgba(126, 15, 198, 1);
+        width: 150px;
+        margin: 20px 0 0 40px;
+
+    }
+ 
+
+}
+.profile-input-section{
+    width: 85%;
+    margin: auto;
+}
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+    input{
+        @include input();
+        width: 70%;
+        @include font();
+    }
+    label{
+        @include font();
+    }
+}
+.profile-img{
+    margin: 0 0px 40px 80px;
+    p{
+       @include font();
+       padding-top: 40px;
+    }
+}
+.profile{
+    background-color: white;
+   
+}
+.update{
+    margin: 20px auto
+}
+.btn{
+    @include btn();
+
+
+}
