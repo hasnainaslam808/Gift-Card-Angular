@@ -5,7 +5,7 @@
         </div>
         <div class="side-list">
             <ul>
-                <li *ngFor="let item of listArray ">
+                <li  *ngFor="let item of listArray " routerLink={{item.path}} [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">
                     <img [src]="item.img" alt="" width="15px" height="15px"> <span>{{item.name}}</span>
 
                 </li>

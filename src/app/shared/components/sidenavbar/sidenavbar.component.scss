@@ -1,7 +1,11 @@
 .mainpage {
     display: flex;
     flex-direction: row;
+.active{
+    background-color: rgb(126, 15, 198);
+    border-radius: 5px;
 
+}
     .sidebar {
         width: 250px;
         height: 100vh;

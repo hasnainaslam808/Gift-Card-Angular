@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {
     this.activatedRoute.data.subscribe((data: any) => {
       this.currentRoute = data.currentRoute;
-      console.log(this.currentRoute);
+     
     });
   }
 
