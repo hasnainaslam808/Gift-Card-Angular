@@ -10,7 +10,7 @@ import { filter } from 'rxjs';
 export class AppComponent {
   title = 'gift-card';
 
-show:boolean = false;
+show = false;
 constructor(private router:Router,private activatedRoute:ActivatedRoute){
 
 }
