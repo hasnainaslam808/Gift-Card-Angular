@@ -15,6 +15,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { ProfileComponent } from './profile/profile.component';
 import { SettingComponent } from './setting/setting.component';
 import { FormsModule } from '@angular/forms';
+import { CreatePolicyComponent } from './create-policy/create-policy.component';
+import { NgxEditorModule } from 'ngx-editor';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,13 @@ import { FormsModule } from '@angular/forms';
     NotificationsComponent,
     ProfileComponent,
     SettingComponent,
+    CreatePolicyComponent,
     
   ],
   imports: [
     CommonModule,
     FormsModule,
+    NgxEditorModule,
     NgxPaginationModule,
     RouterModule.forChild([
       { path: '', component:DashboardComponent,data:{header:true} },
@@ -46,6 +50,7 @@ import { FormsModule } from '@angular/forms';
       { path: 'notification', component:NotificationsComponent,data:{header:true}  },
       { path: 'profile', component:ProfileComponent,data:{header:true}  },
       { path: 'setting', component:SettingComponent,data:{header:true}  },
+      { path: 'createpolicy', component:CreatePolicyComponent,data:{header:true}  },
 
 
 

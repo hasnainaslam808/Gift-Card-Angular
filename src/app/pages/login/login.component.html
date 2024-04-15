@@ -4,7 +4,7 @@
             <div class="left-div">
                 <img src="assets/auth.png" alt="">
             </div>
-    
+
         </div>
         <div class="right">
             <div class="logo ">
@@ -30,17 +30,18 @@
                     <div class="input password">
                         <div>
                             <img src="assets/lock.png" alt="" width="24px" height="24px">
-                            <input [type]="showPassword ? 'text' : 'password'" placeholder="Password" #passwordField name="password"
-                            [(ngModel)]="password" name="password" required >
+                            <input [type]="showPassword ? 'text' : 'password'" placeholder="Password" #passwordField
+                                name="password" [(ngModel)]="password" name="password" required>
                         </div>
-                        <img [src]="showPassword ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt="" (click)="togglePasswordVisibility()" width="24px" height="24px">
+                        <img [src]="showPassword ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt=""
+                            (click)="togglePasswordVisibility()" width="24px" height="24px">
                     </div>
                     <div class="Remember">
                         <div>
                             <input type="checkbox"><span>Remember me</span>
                         </div>
 
-                        <p><a routerLink="/reset-password" >Forgot Password?</a> </p>
+                        <p><a routerLink="/reset-password">Forgot Password?</a> </p>
 
                     </div>
                     <button class="btn" routerLink="/dashboard">Login</button>
@@ -92,21 +93,27 @@
                     <div class="input password">
                         <div>
                             <img src="assets/lock.png" alt="" width="24px" height="24px">
-                            <input [type]="showPassword1 ? 'text' : 'password'" #passwordField1="ngModel" placeholder="Password" name="newPassword" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
-                            minlength="8" ngModel required>
+                            <input [type]="showPassword1 ? 'text' : 'password'" #passwordField1="ngModel"
+                                placeholder="Password" name="newPassword"
+                                pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$" minlength="8" ngModel required>
                         </div>
-                        <img [src]="showPassword1 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt="" (click)="togglePasswordVisibility1()" width="24px" height="24px">
+                        <img [src]="showPassword1 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt=""
+                            (click)="togglePasswordVisibility1()" width="24px" height="24px">
                     </div>
-                    <span *ngIf="passwordField1.invalid && passwordField1.touched " class="text-danger" style="font-size: 12px;">use capital,small letter and numbers</span>
+                    <span *ngIf="passwordField1.invalid && passwordField1.touched " class="text-danger"
+                        style="font-size: 12px;">use capital,small letter and numbers</span>
                     <div class="input password">
                         <div>
                             <img src="assets/lock.png" alt="" width="24px" height="24px">
-                            <input [type]="showPassword2 ? 'text' : 'password'" placeholder="Confirm Password" #passwordField2="ngModel" name="confirmPassword" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
-                            minlength="8" ngModel required>
+                            <input [type]="showPassword2 ? 'text' : 'password'" placeholder="Confirm Password"
+                                #passwordField2="ngModel" name="confirmPassword"
+                                pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$" minlength="8" ngModel required>
                         </div>
-                        <img [src]="showPassword2 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt="" (click)="togglePasswordVisibility2()" width="24px" height="24px">
+                        <img [src]="showPassword2 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt=""
+                            (click)="togglePasswordVisibility2()" width="24px" height="24px">
                     </div>
-                    <span *ngIf="passwordField2.touched && passwordField1.value !== passwordField2.value" class="text-danger" style="font-size: 12px;">Password not matched</span>
+                    <span *ngIf="passwordField2.touched && passwordField1.value !== passwordField2.value"
+                        class="text-danger" style="font-size: 12px;">Password not matched</span>
                     <button type="submit" class="btn" [disabled]="resetPassword.invalid">Confirm</button>
                 </form>
 

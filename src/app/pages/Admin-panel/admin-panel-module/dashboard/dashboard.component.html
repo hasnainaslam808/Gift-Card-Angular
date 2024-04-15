@@ -1,20 +1,22 @@
-<div class="label">
-    <h3>Dashboard</h3>
-</div>
+<main>
+    <div class="label">
+        <h3>Dashboard</h3>
+    </div>
 
 
 
-<div class="parent">
-    <div class="items" *ngFor="let item of cards">
-        <div class="inside">
-            <div>
-                <img [src]="item.img" alt="" width="37px" height="37px">
-            </div>
-            <p >{{item.title}}</p>
-            <div class="d-flex justify-content-between">
-                <h3>{{item.price}}</h3>
-                <img id="arrow" src="assets/Black (2).png" alt="" width="30px" height="18px">
+    <div class="parent">
+        <div class="items" *ngFor="let item of cards">
+            <div class="inside">
+                <div>
+                    <img [src]="item.img" alt="" width="37px" height="37px">
+                </div>
+                <p>{{item.title}}</p>
+                <div class="d-flex justify-content-between">
+                    <h3>{{item.price}}</h3>
+                    <img id="arrow" src="assets/Black (2).png" alt="" width="30px" height="18px">
+                </div>
             </div>
         </div>
     </div>
-</div>
+</main>

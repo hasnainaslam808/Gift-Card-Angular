@@ -136,3 +136,12 @@ main {
     width: 90%;
     height: 60px;
 }
+
+
+
+
+@media (max-width: 860px) {
+    main{
+        margin-left: 5px;
+    }
+}

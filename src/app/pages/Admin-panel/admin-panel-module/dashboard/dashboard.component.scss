@@ -1,7 +1,11 @@
 
 @import '../../../Admin-panel/admin-panel-module/categories/categories.component.scss';
+
+main{
+    margin-left: 250px;
+}
 .label {
-    margin: 0 20px 20px 270px;
+    margin: 0 20px 20px 20px;
     font-weight: 700;
 }
 
@@ -32,5 +36,10 @@
     gap: 10px;
 
     justify-content: center;
-    margin-left: 250px;
+  
+}
+@media (max-width: 860px) {
+    main{
+        margin-left: 5px;
+    }
 }

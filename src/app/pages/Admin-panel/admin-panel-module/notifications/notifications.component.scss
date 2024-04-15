@@ -22,3 +22,8 @@ main{
         font-weight: 400;
     }
 }
+@media (max-width: 860px) {
+    main{
+        margin-left: 5px;
+    }
+}
