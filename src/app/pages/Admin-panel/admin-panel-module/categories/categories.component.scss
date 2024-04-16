@@ -11,10 +11,10 @@
     outline: none;
     border: 1px solid rgba(226, 232, 240, 1);
     border-radius: 5px;
-
+    padding-left: 10px;
     &::placeholder {
         color: rgba(148, 163, 184, 1);
-        padding-left: 10px;
+      
     }
 }
 

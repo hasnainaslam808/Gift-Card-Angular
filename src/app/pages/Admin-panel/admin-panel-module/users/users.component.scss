@@ -10,17 +10,20 @@
     outline: none;
     border: 1px solid rgba(226, 232, 240, 1);
     border-radius: 5px;
+    padding-left: 10px;
     &::placeholder { 
         color: rgba(148, 163, 184, 1); 
-        padding-left: 10px;
+     
     }
 }
 @mixin button{
     width: 170px;
-    height: 53px;
+    height: 55px;
     background-color: rgba(126, 15, 198, 1);
     color: white;
     font-weight: 700;
+    margin: 0;
+
 }
 
 main{
@@ -42,6 +45,8 @@ main{
     justify-content: space-between;
 }
 .searchbar{
+    padding: 10px;
+
   @include bar();
     input{
       @include input();

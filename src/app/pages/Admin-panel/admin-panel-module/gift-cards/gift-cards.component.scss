@@ -67,3 +67,107 @@ main {
         margin-left: 5px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin place {
+    color: rgba(128, 141, 158, 1);
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 16px;
+}
+@mixin btngrp{
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        align-items: end;
+        margin-bottom: 10px;
+}
+
+@mixin filter-reset {
+    width: 215px;
+    height: 56px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+}
+
+.select {
+    width: 208px;
+    height: 56px;
+    outline: none;
+    font-size: 16px;
+}
+
+.filter {
+    background-color: white;
+
+    input {
+        width: 310px;
+        height: 56px;
+        border: 1px solid rgba(226, 232, 240, 1);
+        border-radius: 5px;
+        outline: none;
+        padding-left: 10px;
+        &::placeholder {
+            
+            @include place();
+        }
+
+    }
+    .btngrp3{
+        display: flex;
+        align-items:end ;
+        gap: 12px;
+    }
+
+    .range {
+        input {
+            width: 95px;
+            height: 56px;
+            border: 1px solid rgba(226, 232, 240, 1);
+            border-radius: 5px;
+            outline: none;
+            padding-left: 10px;
+            &::placeholder {
+               
+                @include place();
+            }
+        }
+    }
+
+    .btngrp1 {
+    @include btngrp();
+
+        .filter {
+            background-color: rgb(126, 15, 198);
+            color: white;
+            @include filter-reset();
+        }
+
+        .reset {
+            background-color: rgb(249, 250, 253);
+            color: rgba(128, 141, 158, 1);
+            @include filter-reset();
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+    }
+}

@@ -4,6 +4,7 @@
     height: 63px;
     border-radius: 16px 16px 0px 0px;
     border: none;
+  font-weight: 600;
 }
 main {
  
@@ -62,7 +63,13 @@ main {
     border-radius: 16px;
     overflow-x: scroll;
 }
-
+.category{
+    padding: 3px;
+    background-color: rgba(126, 15, 198, 0.1);
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+}
 .image-cell {
     .btn {
         outline: none;
@@ -94,7 +101,9 @@ main {
 }
 
 // modal
-
+.modal-dialog{
+    width: 25%;
+}
 .modal-body{
     display: flex;
     flex-direction: column;
