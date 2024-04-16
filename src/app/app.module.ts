@@ -9,12 +9,14 @@ import { SidenavbarComponent } from './shared/components/sidenavbar/sidenavbar.c
 import { HeaderComponent } from './shared/components/header/header.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SidenavbarComponent,
     HeaderComponent,
+  
 
     
   ],

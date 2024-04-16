@@ -6,7 +6,7 @@
     border: none;
 }
 main {
-    margin-left: 250px;
+ 
 
     .filter {
         padding: 10px 0;
@@ -60,6 +60,7 @@ main {
 .table-div {
     margin: 5px 15px;
     border-radius: 16px;
+    overflow-x: scroll;
 }
 
 .image-cell {

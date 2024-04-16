@@ -1,21 +1,21 @@
-<main>
+<main class="main-container">
     <div class="left" *ngIf="show">
-        <app-sidenavbar></app-sidenavbar>
+        <app-sidenavbar ></app-sidenavbar>
         <!-- SIDEBAR -->
     </div>
 
-    <div class="right">
-        <div class="top" *ngIf="show">
-      
-            
-            
-            <app-header></app-header>
-            
-            <!-- HEADER -->
-        </div>
-        <div class="bottom">
+    <div class="right" [ngClass]="{'login-layout':show===false}">
+       
+
+
+
+            <app-header *ngIf="show"></app-header>
+
+         
+
+    
             <router-outlet></router-outlet>
-        </div>
+       
     </div>
 </main>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidenavbar',
@@ -23,5 +23,9 @@ export class SidenavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Output() closeOffcanvasEvent = new EventEmitter<void>();
 
+    closeOffcanvas() {
+        this.closeOffcanvasEvent.emit();
+    }
 }

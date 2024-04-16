@@ -1,29 +1,59 @@
-main {
-    display: flex;
-    height: 100vh; 
-}
+// main {
+//     display: flex;
+//     height: 100vh; 
+// }
 
-.left {
-    width: 250px; 
-    position: fixed;
-    top: 0;
-    bottom: 0; 
-    overflow-y: auto; 
-}
+// .left {
+//     width: 250px; 
+//     position: fixed;
+//     top: 0;
+//     bottom: 0; 
+//     overflow-y: auto; 
+// }
 
-.right {
-    flex: 1; 
-    overflow-x: auto; 
+// .right {
+//     flex: 1; 
+//     overflow-x: auto; 
   
-}
+// }
 
-.top {
-    height: 90px;
-    width: 100%;
+// .top {
+//     height: 90px;
+//     width: 100%;
 
-}
+// }
 
-.bottom {
+// .bottom {
  
-    background-color: rgb(245, 246, 247);
+//     background-color: rgb(245, 246, 247);
+// }
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    .left{
+        width: 18%;
+    }
+    .right{
+        width: 82%;
+        height: 100vh;
+
+        overflow-y: auto;
+    }
+ 
+    .login-layout{
+        width: 100%!important;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 980px) {
+    .right {
+  
+      width: 100% !important;
+    }
+    .left{
+        display: none ;
+    }
 }

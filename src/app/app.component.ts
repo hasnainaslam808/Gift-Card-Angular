@@ -14,6 +14,8 @@ show = false;
 constructor(private router:Router,private activatedRoute:ActivatedRoute){
 
 }
+
+
 ngOnInit(): void {
  
   

@@ -1,5 +1,7 @@
 main {
-    margin-left: 250px;
+    
+        background-color: rgb(246, 247, 247);
+    
 
     .filter {
         padding: 10px 0;
@@ -25,6 +27,7 @@ main {
 .table-div {
     margin: 5px 15px;
     border-radius: 16px;
+    overflow-x: scroll;
 }
 
 .image-cell {

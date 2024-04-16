@@ -17,6 +17,7 @@ import { SettingComponent } from './setting/setting.component';
 import { FormsModule } from '@angular/forms';
 import { CreatePolicyComponent } from './create-policy/create-policy.component';
 import { NgxEditorModule } from 'ngx-editor';
+import { ViewPolicyComponent } from './view-policy/view-policy.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NgxEditorModule } from 'ngx-editor';
     ProfileComponent,
     SettingComponent,
     CreatePolicyComponent,
+    ViewPolicyComponent,
     
   ],
   imports: [
@@ -51,6 +53,7 @@ import { NgxEditorModule } from 'ngx-editor';
       { path: 'profile', component:ProfileComponent,data:{header:true}  },
       { path: 'setting', component:SettingComponent,data:{header:true}  },
       { path: 'createpolicy', component:CreatePolicyComponent,data:{header:true}  },
+      { path: 'viewpolicy', component:ViewPolicyComponent,data:{header:true}  },
 
 
 

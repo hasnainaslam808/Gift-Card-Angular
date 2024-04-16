@@ -6,8 +6,8 @@
 }
 
 @mixin input {
-    width: 75%;
-    height: 55px;
+    width: 77%;
+    height: 52px;
     outline: none;
     border: 1px solid rgba(226, 232, 240, 1);
     border-radius: 5px;
@@ -20,14 +20,14 @@
 
 @mixin button {
     width: 170px;
-    height: 53px;
+    height: 52px;
     background-color: rgba(126, 15, 198, 1);
     color: white;
     font-weight: 700;
 }
 
-main {
-    margin-left: 250px;
+main{
+    background-color: rgb(246, 247, 247);
 }
 
 .label {
@@ -53,11 +53,13 @@ main {
 
     input {
         @include input();
+        margin: 10px auto;
 
     }
 
     button {
         @include button();
+        margin: 10px auto;
     }
 }
 
@@ -72,6 +74,7 @@ main {
 
 .table-div {
     margin: 5px 15px;
+    overflow-x:scroll;
 }
 
 
@@ -114,6 +117,9 @@ main {
         font-size: xx-large;
     }
 
+}
+.table{
+    overflow-x: auto;
 }
 @media (max-width: 860px) {
     main{
