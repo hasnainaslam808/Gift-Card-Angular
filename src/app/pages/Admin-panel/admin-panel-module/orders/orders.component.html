@@ -10,9 +10,9 @@
     <div class="order-history">
         <h6>Order History</h6>
     </div>
-    <div class="table-div" >
+    <div class="table-div">
 
-        <table class="table" >
+        <table class="table">
             <thead>
                 <tr>
                     <th>Sr No</th>
@@ -32,7 +32,8 @@
             </thead>
             <tbody>
 
-                <tr class="image-cell" *ngFor="let item of tableData | paginate:{itemsPerPage:pageSize,currentPage:currentPage}; let i=index">
+                <tr class="image-cell"
+                    *ngFor="let item of tableData | paginate:{itemsPerPage:pageSize,currentPage:currentPage}; let i=index">
                     <td>{{i+1 +(pageSize*(currentPage-1))}}</td>
                     <td>{{item.cardID}}</td>
                     <td> {{item.email}}</td>
@@ -46,15 +47,16 @@
                     <td></td>
 
                     <td>
-                        <div class="bin"><img src="assets/Group 1597883372.svg" alt="" width="35px"
-                                height="35px"><span><button class="btn">Available</button></span></div>
+                        <div class="bin"><img data-bs-toggle="modal" data-bs-target="#myModal"
+                                src="assets/Group 1597883372.svg" alt="" width="35px" height="35px"><span><button
+                                    class="btn">Available</button></span></div>
                     </td>
                 </tr>
 
 
-              
+
             </tbody>
-         
+
         </table>
 
         <div class="pagination">
@@ -66,3 +68,59 @@
         </div>
     </div>
 </main>
+
+
+
+
+<!-- modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="heading">
+                <h5 class="modal-title">Gift Card Receiver Detail</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+
+
+            <div class="modal-body">
+                <!-- Add your form inputs here -->
+                <div>
+                    <img src="assets/mcdonald.svg" alt="" width="100%">
+                </div>
+                <div><p>Receiver ID</p></div>
+                <div>
+                    <div class="container">
+                        <div><img src="assets/profil.svg" alt="" class="image" width="40px" height="40px"></div>
+            
+            
+            
+            
+                        <div class="image-2">
+                            <p class="yasman">Yasmany B</p>
+                            <div class="email">
+                                <img src="assets/Email.png" alt="" class="image" width="16px" height="16px">
+                                <p class="gmail">ybreff87@gmail.co</p>
+                            </div>
+                            <div class="email">
+                                <img src="assets/phone.png" alt="" class="image" width="16px" height="16px">
+                                <p class="gmail">9876567876</p>
+                            </div>
+                            <div class="email">
+                                <img src="assets/location.png" alt="" class="image" width="16px" height="16px">
+                                <p class="gmail">456 Park Avenue, New York, NY 10022:</p>
+                            </div>
+            
+                        </div>
+            
+                    </div>
+                </div>
+
+            </div>
+
+
+           
+
+        </div>
+    </div>
+</div>

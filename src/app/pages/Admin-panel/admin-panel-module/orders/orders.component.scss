@@ -59,3 +59,107 @@ main {
         font-weight: 700;
     }
 }
+
+
+
+
+
+
+
+
+
+
+// modal
+.modal-body {
+    display: flex;
+flex-direction: column;
+
+}
+// .modal-dialog{
+//     width: 25%;
+// }
+
+.btn {
+    background-color: rgba(126, 15, 198, 1);
+    color: white;
+    margin: 10px auto;
+    width: 90%;
+    height: 60px;
+}
+
+.heading {
+    display: flex;
+    height: 55px;
+    background-color: rgba(17, 0, 54, 1);
+    border-radius: 7px 7px 0px 0px;
+
+    h5 {
+
+        color: white;
+        width: 94%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    button {
+        outline: none;
+        color: white;
+        border: none;
+        background-color: rgb(17, 0, 54);
+        font-size: xx-large;
+    }
+
+}
+
+.container {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+// .image {
+//     margin-left: 9px;
+// }
+
+.yasman {
+    color: #7E0FC6;
+    font-size: 12px;
+    font-weight: 600;
+
+
+}
+
+.email {
+    display: flex;
+    gap: 8px;
+
+}
+
+.gmail {
+    color: #808D9E;
+    font-size: 10px;
+    font-weight: 400;
+
+}
+.image-2{
+    line-height: 10px;
+}
+
+// @media (max-width:1100px){
+//     .modal-dialog{
+//         width: 40%;
+//     }
+// }
+// @media (max-width:700px){
+//     .modal-dialog{
+//         width: 50%;
+//     }
+// }
+// @media (max-width:580px){
+//     .modal-dialog{
+//         width: 70%;
+//     }
+// }
