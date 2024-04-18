@@ -1,11 +1,12 @@
 @mixin img {
-    padding: 9px;
-    border-radius: 48px;
+    // padding: 9px;
+    // border-radius: 48px;
     margin-inline-start: 10px;
 }
 
 .main-div {
     background-color: rgb(246, 246, 246);
+    height: 100vh;
 }
 
 .user {
@@ -19,6 +20,9 @@
 .Main-user {
     margin-inline: 2%;
     display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 10px;
 }
 
 .details {
@@ -29,18 +33,17 @@
 
 }
 
-.container {
+.container1 {
     background-color: white;
     width: 95%;
     margin: auto;
     display: flex;
     align-items: center;
     border-radius: 10px;
+    padding: 12px;
+    gap: 15px;
 }
 
-.image {
-    margin-left: 9px;
-}
 
 .yasman {
     color: #7E0FC6;
@@ -64,16 +67,19 @@
 }
 
 .details-1 {
-    width: 90%;
+    width: 94%;
     margin: auto;
+
+    p {
+        color: #1C1C27;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.image-2{
+    line-height: 12px;
 }
 
-.order-1 {
-    color: #1C1C27;
-    font-size: 18px;
-    font-weight: 600;
-
-}
 
 
 
@@ -82,7 +88,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
-    margin-inline-start: 80px;
+    margin-inline-start: 35px;
 
     .carditem {
         display: flex;
@@ -94,37 +100,30 @@
         background-color: white;
         border: 1px solid #E2E8F0;
         border-radius: 9px;
-
-        .img1 {
+        img{
             @include img();
-            background-color: rgb(229, 237, 245);
         }
 
-        .img2 {
-            @include img();
-            background-color: rgb(255, 231, 231);
-        }
-
-        .img3 {
-            @include img();
-            background-color: rgb(229, 247, 234);
-        }
+   
 
         h6 {
             font-weight: 400;
+            font-size: 16px;
         }
 
         h4 {
             font-weight: 700;
+            font-size: 26px;
         }
     }
 }
 
 @media (max-width: 600px) {
-    .card-container{
+    .card-container {
         margin-inline-start: 50px;
     }
 }
+
 // .filter {
 //     margin: 28px 0 0 20px;
 //     width: 95%;

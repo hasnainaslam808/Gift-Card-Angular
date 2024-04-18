@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-sidenavbar',
@@ -19,9 +21,30 @@ export class SidenavbarComponent implements OnInit {
     
     
     ]
-  constructor() { }
+  activeRoute: string='';
+  constructor(private router:Router) { 
+  }
 
-  ngOnInit(): void {
+ 
+
+
+
+
+
+ngOnInit(): void {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd)
+      )
+      .subscribe(() => {
+        this.updateActiveRoute();
+      });
+  }
+  updateActiveRoute(): void {
+    const currentRoute = this.router.url.split('/')[2];
+    this.activeRoute = currentRoute;
+    console.log(this.activeRoute)
+
   }
   @Output() closeOffcanvasEvent = new EventEmitter<void>();
 

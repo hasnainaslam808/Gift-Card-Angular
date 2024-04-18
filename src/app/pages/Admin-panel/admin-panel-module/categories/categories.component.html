@@ -3,7 +3,7 @@
         <h3>Categories</h3>
         <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Add New Category</button>
     </div>
-    <div style="background-color: white;">
+    <div>
         <div class="searchbar">
             <input type="text" placeholder="Search by Name">
             <button class="btn">Search</button>
@@ -11,7 +11,7 @@
 
         <div class="table-div">
 
-            <table class="table">
+            <table class="table ">
                 <thead>
                     <tr>
                         <th>Sr No</th>
@@ -43,8 +43,9 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <div class="bin"><img data-bs-toggle="modal" data-bs-target="#myModal" src="assets/pencil.png" alt="" width="35px" height="35px"> <img
-                                    src="assets/bin.png" alt="" width="35px" height="35px"></div>
+                            <div class="bin"><img data-bs-toggle="modal" data-bs-target="#myModal"
+                                    src="assets/pencil.png" alt="" width="35px" height="35px"> <img src="assets/bin.png"
+                                    alt="" width="35px" height="35px"></div>
                         </td>
                     </tr>
 
@@ -60,22 +61,30 @@
     <div class="modal fade" id="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-               <div class="heading">
-                <h5 class="modal-title">Add Category</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-               </div>
-                
-              
-                <div class="modal-body">
-                    <!-- Add your form inputs here -->
-                    <label for="upload-image"><img src="assets/Group 1000005174.svg" alt="" width="67px" height="72px"></label>
-                    <input class="d-none" type="file" id="upload-image">
-                    <input type="text" class="form-control" placeholder="Category Name">
+                <div class="heading">
+                    <h5 class="modal-title">Add Category</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"> <span
+                            aria-hidden="true">&times;</span> </button>
                 </div>
-            
 
-                    <button type="button" class="btn">Add</button>
-                
+
+                <div class="modal-body">
+                    <div class="label1">
+                        <p>Category Icon</p>
+                        <p>Category Name</p>
+                    </div>
+                    <div class="label2">
+                        <label for="upload-image"><img src="assets/Group 1000005174.svg" alt="" width="67px"
+                                height="72px"></label>
+                        <input class="d-none" type="file" id="upload-image">
+                        <input type="text" class="form-control" placeholder="Category Name">
+                    </div>
+
+                </div>
+
+
+                <button type="button" class="btn">Add</button>
+
             </div>
         </div>
     </div>

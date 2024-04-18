@@ -1,69 +1,65 @@
-@mixin bar{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    background-color: white;
-}
-@mixin input{
-    width: 83%;
-    height: 55px;
-    outline: none;
-    border: 1px solid rgba(226, 232, 240, 1);
-    border-radius: 5px;
-    padding-left: 10px;
-    &::placeholder { 
-        color: rgba(148, 163, 184, 1); 
-     
-    }
-}
-@mixin button{
-    width: 170px;
-    height: 55px;
-    background-color: rgba(126, 15, 198, 1);
-    color: white;
-    font-weight: 700;
-    margin: 0;
+@import "../categories/categories.component.scss";
 
-}
 
-main{
+
+main {
     background-color: rgb(246, 247, 247);
+    height: 100vh;
 }
-.label{
-    h3{
+
+.label {
+    h3 {
         margin: 20px;
     }
-    button{
+
+    button {
         width: 220px;
         background-color: rgba(126, 15, 198, 1);
         color: white;
         font-weight: 700;
-     margin: 10px 30px 0 0;
+        margin: 10px 30px 0 0;
         height: 55px;
     }
+
     display: flex;
     justify-content: space-between;
 }
-.searchbar{
-    padding: 10px;
 
-  @include bar();
-    input{
-      @include input();
+.searchbar {
+
+    margin: auto;
+    width: 96%;
+    border-radius: 9px;
+
+    @include bar();
+
+    input {
+        @include input();
+        margin: 10px 8px;
 
     }
-    button{
-      @include button();
+
+    button {
+        @include button();
+        margin: 10px 16px 10px 3px;
     }
 }
-.image-cell{
+
+.image-cell {
     vertical-align: middle;
 }
-.bin{
+
+.bin {
     display: flex;
     gap: 10px;
 }
-.table-div{
-    margin: 5px 15px;
-    overflow-x: scroll;
+
+.table-div {
+    margin: 5px auto;
+    overflow-x: auto;
+    width: 96%;
+    border-radius: 9px;
+    margin-top: 15px;
+    background-color: white;
+    padding: 20px;
 }

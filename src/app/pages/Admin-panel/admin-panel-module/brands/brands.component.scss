@@ -7,7 +7,7 @@
   font-weight: 600;
 }
 main {
- 
+ height: 100vh;
 
     .filter {
         padding: 10px 0;
@@ -37,7 +37,9 @@ main {
   .categories-btn{
     display: flex;
     gap: 5px;
-    margin: 10px 0 0 20px;
+    margin: 10px auto 0 auto;
+    width: 95%;
+    
     .Categories{
         background-color: rgba(17, 0, 54, 1);
         color: white;
@@ -59,9 +61,14 @@ main {
 }
 
 .table-div {
-    margin: 5px 15px;
+    margin: 0 auto;
     border-radius: 16px;
-    overflow-x: scroll;
+    overflow-x: auto;
+    background-color: white;
+    width: 96%;
+    border-radius: 9px;
+  
+    padding: 20px;
 }
 .category{
     padding: 3px;

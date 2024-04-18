@@ -14,7 +14,9 @@
          
 
     
-            <router-outlet></router-outlet>
+            <div [ngClass]="{'content-layout':show}">
+                <router-outlet></router-outlet>
+            </div>
        
     </div>
 </main>

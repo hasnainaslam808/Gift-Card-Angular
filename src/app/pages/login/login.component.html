@@ -9,7 +9,7 @@
         <div class="right">
             <div class="logo ">
                 <div class="col-md-3 col-12 gift-logo">
-                    <img src="assets/Group 6956.png" alt="" height="54px">
+                    <img src="assets/hdlogo.svg" alt="" height="54px">
                 </div>
                 <div class="">
                     <img src="assets/Rectangle 6486.png" alt="" width="90%" height="5px">
@@ -24,7 +24,7 @@
 
                 <form #loginForm="">
                     <div class="input">
-                        <img src="assets/Group.png" alt="" width="24px" height="24px">
+                        <img src="assets/Group.png" alt="" width="24px" height="20px">
                         <input type="text" placeholder="Email" ngModel required name="email">
                     </div>
                     <div class="input password">
@@ -33,7 +33,7 @@
                             <input [type]="showPassword ? 'text' : 'password'" placeholder="Password" #passwordField
                                 name="password" [(ngModel)]="password" name="password" required>
                         </div>
-                        <img [src]="showPassword ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt=""
+                        <img [src]="showPassword ? 'assets/open eye.svg' : 'assets/eye-off.svg'" alt=""
                             (click)="togglePasswordVisibility()" width="24px" height="24px">
                     </div>
                     <div class="Remember">
@@ -58,7 +58,7 @@
 
                 <form>
                     <div class="input">
-                        <img src="assets/Group.png" alt="" width="24px" height="24px">
+                        <img src="assets/Group.png" alt="" width="24px" height="20px">
                         <input type="text" placeholder="Enter Your Email">
                     </div>
                     <button class="btn continue" routerLink="/emial-verification">Continue</button>
@@ -85,7 +85,7 @@
 
 
             <!-- new -->
-            <div class="login-section" *ngIf="currentRoute==='/set-new-password'">
+            <div class="login-section" *ngIf="currentRoute==='set-new-password'">
                 <h3>Reset your Password</h3>
                 <p>Please enter your new password and confirm password</p>
 
@@ -97,7 +97,7 @@
                                 placeholder="Password" name="newPassword"
                                 pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$" minlength="8" ngModel required>
                         </div>
-                        <img [src]="showPassword1 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt=""
+                        <img [src]="showPassword1 ? 'assets/open eye.svg' : 'assets/eye-off.svg'" alt=""
                             (click)="togglePasswordVisibility1()" width="24px" height="24px">
                     </div>
                     <span *ngIf="passwordField1.invalid && passwordField1.touched " class="text-danger"
@@ -109,7 +109,7 @@
                                 #passwordField2="ngModel" name="confirmPassword"
                                 pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$" minlength="8" ngModel required>
                         </div>
-                        <img [src]="showPassword2 ? 'assets/eye-slash.2.svg' : 'assets/eye.3.svg'" alt=""
+                        <img [src]="showPassword2 ? 'assets/open eye.svg' : 'assets/eye-off.svg'" alt=""
                             (click)="togglePasswordVisibility2()" width="24px" height="24px">
                     </div>
                     <span *ngIf="passwordField2.touched && passwordField1.value !== passwordField2.value"

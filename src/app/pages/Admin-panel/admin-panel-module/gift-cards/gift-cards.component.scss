@@ -1,6 +1,7 @@
 main {
     
         background-color: rgb(246, 247, 247);
+        height: 100vh;
     
 
     .filter {
@@ -25,9 +26,14 @@ main {
 }
 
 .table-div {
-    margin: 5px 15px;
+    margin: 5px auto;
     border-radius: 16px;
-    overflow-x: scroll;
+    overflow-x: auto;
+    background-color: white;
+    width: 96%;
+    border-radius: 9px;
+    margin-top: 15px;
+    padding: 20px;
 }
 
 .image-cell {

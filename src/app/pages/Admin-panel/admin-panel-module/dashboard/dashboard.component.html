@@ -19,4 +19,25 @@
             </div>
         </div>
     </div>
+    <div class="graph">
+        <div class="heading1">
+            <p>Sales Statistics</p>
+            <div class="calendar ">
+               <img src="assets/cal1.svg" alt="" width="38px" height="38px">
+               <div class="cal-btn">
+                <input type="date" placeholder="je" >
+                <p>to</p>
+                <input type="date" placeholder="yes">
+               </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button class="sales">Sales</button>
+            <button class="orders">Orders</button>
+        </div>
+        <div class="chart">
+            <google-chart title="line chart" [type]="chartType" [data]="myData" style="width:96%; margin: auto;">
+            </google-chart>
+        </div>
+    </div>
 </main>

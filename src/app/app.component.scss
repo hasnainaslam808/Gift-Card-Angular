@@ -35,10 +35,10 @@
     justify-content: center;
     overflow: hidden;
     .left{
-        width: 18%;
+        width: 15%;
     }
     .right{
-        width: 82%;
+        width: 85%;
         height: 100vh;
 
         overflow-y: auto;
@@ -47,6 +47,10 @@
     .login-layout{
         width: 100%!important;
     }
+    // .content-layout{
+    //     width: min(100%,1600px);
+    //     margin: auto;
+    // }
 }
 @media screen and (min-width: 300px) and (max-width: 980px) {
     .right {

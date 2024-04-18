@@ -8,6 +8,8 @@
     border-radius: 8px;
     padding: 8px 16px 8px 16px;
     height: 55px;
+    
+
 }
 @mixin btn{
     width: 170px;
@@ -22,6 +24,8 @@
 
 main{
     background-color: rgb(246, 247, 247);
+   height: 100vh;
+
 }
 .label {
     h3 {
@@ -38,9 +42,14 @@ main{
     // profile section
 
 }
-
+.profile{
+    width: 95%;
+    margin: auto;
+}
 .profile-section {
     background-color: white;
+    width: 95%;
+    margin: auto;
 
     button {
     
@@ -67,7 +76,7 @@ main{
     margin: 15px auto;
     input{
         @include input();
-        width: 70%;
+        width: 64%;
         @include font();
     }
     label{
@@ -90,6 +99,11 @@ main{
 }
 .btn{
     @include btn();
+    margin: 10px 0 0 0;
 
+
+}
+.email{
+    opacity: 50%;
 
 }

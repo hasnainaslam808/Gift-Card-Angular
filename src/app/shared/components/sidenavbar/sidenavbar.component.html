@@ -5,8 +5,16 @@
         </div>
         <div class="side-list">
             <ul>
-                <li  *ngFor="let item of listArray " routerLink={{item.path}} (click)="closeOffcanvas()" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">
+                <!-- <li  *ngFor="let item of listArray " routerLink={{item.path}} (click)="closeOffcanvas()" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"  [ngClass]="{'child':activeRoute==='userdetail'}">
                     <img [src]="item.img" alt="" width="15px" height="15px"> <span>{{item.name}}</span>
+
+                </li> -->
+                <li routerLink="dashboard/categories" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" >
+
+                </li>
+                <li routerLink="dashboard/users" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"  [ngClass]="{'child':activeRoute==='userdetail'}">
+
+                </li> <li routerLink="dashboard/orders" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"  >
 
                 </li>
             </ul>

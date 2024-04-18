@@ -1,6 +1,7 @@
 
 main{
     background-color: rgb(245, 246, 247);
+    height: 100vh;
     .label{
         h6{
             font-size: 18px;
@@ -17,6 +18,10 @@ main{
         display: flex;
         justify-content: space-between;
         background-color: white;
+        width: 95%;
+        margin: auto;
+        border-radius: 9px;
+        padding-bottom: 300px;
         p{
             font-size: 18px;
             font-weight: 600;

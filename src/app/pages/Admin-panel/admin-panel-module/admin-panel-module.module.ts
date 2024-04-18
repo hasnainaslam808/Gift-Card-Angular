@@ -19,7 +19,7 @@ import { CreatePolicyComponent } from './create-policy/create-policy.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { ViewPolicyComponent } from './view-policy/view-policy.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
-
+import { GoogleChartsModule } from 'angular-google-charts';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -41,9 +41,11 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
   imports: [
     CommonModule,
     FormsModule,
+    GoogleChartsModule,
     NgxEditorModule,
     NgxPaginationModule,
     RouterModule.forChild([
+      
       { path: '', component:DashboardComponent,data:{header:true} },
       { path: 'categories', component:CategoriesComponent,data:{header:true}  },
       { path: 'users', component:UsersComponent ,data:{header:true} },

@@ -7,6 +7,10 @@
     margin: 15px 0;
 }
 
+main {
+    background-color: rgb(246, 247, 247);
+    height: 100vh;
+}
 
 .label {
     h3 {
@@ -19,6 +23,10 @@
 
 .setting {
     background-color: white;
+    width: 95%;
+    margin: auto;
+    border-radius: 9px;
+    padding-bottom: 10px;
 
     .set-btn {
 
@@ -29,7 +37,7 @@
         background: white;
         border-bottom: 3px solid rgba(126, 15, 198, 1);
         width: 150px;
-        margin: 20px 0 0 40px;
+        margin: 20px 0 0 0;
 
     }
 
@@ -56,26 +64,38 @@
     padding: 10px 0 8px 4px;
     margin: 15px 0 0 0;
     height: 52px;
+
     img {
         margin-inline-end: 8px
     }
-    input{
+
+    input {
         border: none;
         outline: none;
-      
-        
-    
+        padding-inline: 10px
     }
+
 }
 
 .password {
     @include flex();
+    width: 83%;
 }
-.btn{
+
+.btn {
     @include btn();
 
 
 }
+
+.toggle-btn {
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
 
 
 
@@ -143,4 +163,8 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.enabled {
+    margin: 0 25px 0 0;
 }
