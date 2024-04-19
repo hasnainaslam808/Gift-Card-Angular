@@ -28,9 +28,12 @@ main{
 
 }
 .label {
-    h3 {
-        margin: 20px;
+    margin: 0 20px 20px 10px;
+    font-weight: 700;
+    h3{
+        margin: 20px 0 20px 30px;
     }
+
 
     button {
      @include btn();
