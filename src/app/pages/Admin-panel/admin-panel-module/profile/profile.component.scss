@@ -67,7 +67,7 @@ main{
 
 }
 .profile-input-section{
-    width: 85%;
+    width: 90%;
     margin: auto;
 }
 .inputs{
@@ -76,7 +76,7 @@ main{
     margin: 15px auto;
     input{
         @include input();
-        width: 64%;
+        width: 60%;
         @include font();
     }
     label{

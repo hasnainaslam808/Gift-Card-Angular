@@ -43,7 +43,7 @@ ngOnInit(): void {
   updateActiveRoute(): void {
     const currentRoute = this.router.url.split('/')[2];
     this.activeRoute = currentRoute;
-    console.log(this.activeRoute)
+   
 
   }
   @Output() closeOffcanvasEvent = new EventEmitter<void>();

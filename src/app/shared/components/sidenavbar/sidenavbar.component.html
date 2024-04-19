@@ -1,20 +1,49 @@
 <div class="mainpage">
-    <div class="sidebar"  >
+    <div class="sidebar">
         <div class="logo">
             <img src="assets/logo 2.png" alt="" width="150px" height="38px">
         </div>
         <div class="side-list">
             <ul>
+
                 <!-- <li  *ngFor="let item of listArray " routerLink={{item.path}} (click)="closeOffcanvas()" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"  [ngClass]="{'child':activeRoute==='userdetail'}">
                     <img [src]="item.img" alt="" width="15px" height="15px"> <span>{{item.name}}</span>
 
-                </li> -->
-                <li routerLink="dashboard/categories" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" >
+                </li>  -->
+
+                <li routerLink="/dashboard" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact:true}">
+                    <img src="assets/Group 1597883341.png" alt="" width="15px" height="15px"><span>Dashboard</span>
+                </li>
+
+                <li routerLink="dashboard/categories" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"
+                  >
+                    <img src="assets/Black.png" alt="" width="15px" height="15px"><span>Categories</span>
 
                 </li>
-                <li routerLink="dashboard/users" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"  [ngClass]="{'child':activeRoute==='userdetail'}">
+                <li routerLink="dashboard/users" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact:true}"   [ngClass]="{'child':activeRoute==='userdetail'}">
+                    <img src="assets/User.png" alt="" width="15px" height="15px"><span>Users</span>
 
-                </li> <li routerLink="dashboard/orders" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"  >
+                </li>
+                <li routerLink="dashboard/orders" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact:true}"  >
+                    <img src="assets/Group 1597883373.png" alt="" width="15px" height="15px"><span>Orders</span>
+
+                </li>
+                <li routerLink="dashboard/giftcards" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact:true}"   >
+                    <img src="assets/Group 1597883343.png" alt="" width="15px" height="15px"><span>Gift Cards</span>
+
+                </li>
+                <li routerLink="dashboard/brand" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact:true}"   >
+                    <img src="assets/Group 1597883375.png" alt="" width="15px" height="15px"><span>Total Brands</span>
+
+                </li>
+                <li routerLink="dashboard/policy" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact:true}"    [ngClass]="{'child':activeRoute==='createpolicy'}" [ngClass]="{'child':activeRoute==='viewpolicy'}">
+                    <img src="assets/Group 1597883374.png" alt="" width="15px" height="15px"><span>Policies</span>
 
                 </li>
             </ul>
@@ -25,8 +54,8 @@
 
 
     <!-- header -->
-   
-   
+
+
 
 
 
