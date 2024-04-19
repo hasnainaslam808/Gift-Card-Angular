@@ -151,6 +151,7 @@ main {
 .email {
     display: flex;
     gap: 10px;
+    align-items: last baseline;
 
 }
 
@@ -162,7 +163,7 @@ main {
 }
 
 .image-2 {
-    line-height: 2px;
+    line-height: 4px;
 
     p {
         color: #808D9E;
