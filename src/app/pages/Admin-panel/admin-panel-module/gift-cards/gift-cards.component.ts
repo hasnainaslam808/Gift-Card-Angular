@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gift-cards.component.scss']
 })
 export class GiftCardsComponent implements OnInit {
-
+  currentActiveBtn(res: any) {
+    this.activeBtn = res
+  }   activeBtn: string = 'filter'
   tableData=[
     {cardID:233423,brand:"KFC",amount:23,country:"Pakistan"},
     {cardID:233423,brand:"KFC",amount:23,country:"Pakistan"},
