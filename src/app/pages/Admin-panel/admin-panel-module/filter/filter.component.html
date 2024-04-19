@@ -1,5 +1,5 @@
-<div class="main">
-    <div class="btngrp">
+<!-- <div class="main"> -->
+    <!-- <div class="btngrp">
         <input class="name" type="text" placeholder="Search by Card ID/ Name">
         <select class="form-select select" aria-label="Default select example">
             <option selected>Status</option>
@@ -27,7 +27,7 @@
     </div>
 
 
-    <div class="btngrp">
+  <div class="btngrp">
         <div class="form-group">
             <label>Start Date</label>
             <input  type="date" class="form-control start" id="exampleInputEmail1">
@@ -40,5 +40,35 @@
         <button class="filter">Filter</button>
         <button class="reset">Reset</button>
 
+    </div> --> 
+<!-- </div> -->
+<div class="filter-section">
+    <div class="w-33 search-input">
+        <input type="search" placeholder="Search by Card ID/ Name">
+    </div>
+    <div class="w-33 select-input">
+        <select>
+            <option >Status</option>
+        </select>
+        <select>
+            <option value="#">Brands</option>
+        </select>
+    </div>
+    <div class="w-33 price-range-input">
+        <label for="">Price Range</label>
+        <input type="text" placeholder="Min"> To
+        <input type="text" placeholder="Max">
+    </div>
+    <div class="w-33 date-input">
+        <label for="">Start Date</label>
+        <input type="date">
+    </div>
+    <div class="w-33 date-input ps" style="padding-left: 13px;">
+        <label for="">End Date</label>
+        <input type="date">
+    </div>
+    <div class="w-33 filter-btn">
+        <button [ngClass]="{'active-btn':activeBtn==='filter'}" (click)="currentActiveBtn('filter')">Filter</button>
+        <button [ngClass]="{'active-btn':activeBtn==='reset'}" (click)="currentActiveBtn('reset')">Reset</button>
     </div>
 </div>

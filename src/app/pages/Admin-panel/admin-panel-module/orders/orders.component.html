@@ -4,6 +4,48 @@
     </div>
     <div class="filter">
         <app-filter></app-filter>
+        <!-- <div class="btngrp">
+            <input class="name" type="text" placeholder="Search by Card ID/ Name">
+            <select class="form-select select" aria-label="Default select example">
+                <option selected>Status</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <select class="form-select select" aria-label="Default select example">
+                <option selected>Brands</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <div class="btngrp3">
+                <p>Price Range</p>
+                <div class="range">
+                    <input class="ran" type="text" placeholder="Min">
+                </div>
+    
+                <p>to</p>
+                <div class="range">
+                    <input type="text" placeholder="Mix">
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="btngrp">
+            <div class="form-group">
+                <label>Start Date</label>
+                <input  type="date" class="form-control start" id="exampleInputEmail1">
+            </div>
+            <div class="form-group">
+                <label>End Date</label>
+                <input type="date" class="form-control start" id="exampleInputEmail1">
+            </div>
+    
+            <button class="filter">Filter</button>
+            <button class="reset">Reset</button>
+    
+        </div> -->
     </div>
 
 
@@ -62,11 +104,12 @@
         <div class="pagination mt-5">
             <p>Showing {{1}}-{{12}} of {{738}}</p>
             <pagination-controls (pageChange)="currentPage=$event">
-
+        
             </pagination-controls>
-
+        
         </div>
     </div>
+  
 </main>
 
 

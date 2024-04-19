@@ -1,112 +1,221 @@
-@mixin place {
-    color: rgba(128, 141, 158, 1);
-    margin-left: 15px;
-    font-weight: 500;
-    font-size: 16px;
-}
-@mixin btngrp{
+// @mixin place {
+//     color: rgba(128, 141, 158, 1);
+//     margin-left: 15px;
+//     font-weight: 500;
+//     font-size: 16px;
+// }
+// @mixin btngrp{
+//     display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         gap: 12px;
+//         justify-content: center;
+//         align-items: end;
+//         margin-bottom: 10px;
+// }
+
+// @mixin filter-reset {
+//     width: 230px;
+//     height: 56px;
+//     border-radius: 5px;
+//     outline: none;
+//     font-size: 16px;
+//     font-weight: 700;
+//     border: none;
+// }
+
+// .select {
+//     width: 16%;
+//     height: 56px;
+//     outline: none;
+//     font-size: 16px;
+// }
+
+// .main {
+//     background-color: white;
+
+//     input {
+//         width: 33%;
+//         height: 56px;
+//         border: 1px solid rgba(226, 232, 240, 1);
+//         border-radius: 5px;
+//         outline: none;
+//         padding-left: 10px;
+//         &::placeholder {
+
+//             @include place();
+//         }
+
+//     }
+//     .btngrp3{
+//         display: flex;
+//         align-items:end ;
+//         gap: 12px;
+
+//     }
+
+
+//     .range {
+//         input {
+//             width: 105px;
+//             height: 56px;
+//             border: 1px solid rgba(226, 232, 240, 1);
+//             border-radius: 5px;
+//             outline: none;
+//             padding-left: 10px;
+//             &::placeholder {
+
+//                 @include place();
+//             }
+//         }
+//     }
+
+//     .btngrp {
+//         display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         gap: 18px;
+//         justify-content:space-around;
+//         align-items: end;
+//         margin-bottom: 10px;
+
+
+//         .filter {
+//             background-color: rgb(126, 15, 198);
+//             color: white;
+//             @include filter-reset();
+//         }
+
+//         .reset {
+//             background-color: rgb(249, 250, 253);
+//             color: rgba(128, 141, 158, 1);
+//             @include filter-reset();
+//         }
+
+//         label {
+//             font-weight: 600;
+//         }
+
+//     }
+//     .name{
+//         width: 263;
+//     }
+//     .form-group{
+//         width: 23%;
+//     }
+//     .select{
+//         width: 15%;
+//     }
+//     .ran{
+//         width: 68%;
+//     }
+// }
+.filter-section {
+   margin: 10px;
+    width: 99%;
     display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-        align-items: end;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    
+
+    label {
+        display: block;
         margin-bottom: 10px;
-}
-
-@mixin filter-reset {
-    width: 230px;
-    height: 56px;
-    border-radius: 5px;
-    outline: none;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
-}
-
-.select {
-    width: 208px;
-    height: 56px;
-    outline: none;
-    font-size: 16px;
-}
-
-.main {
-    background-color: white;
+    }
 
     input {
-        width: 350px;
-        height: 56px;
-        border: 1px solid rgba(226, 232, 240, 1);
-        border-radius: 5px;
+        padding-inline: 5px;
+        height: 55px;
         outline: none;
-        padding-left: 10px;
-        &::placeholder {
-         
-            @include place();
-        }
-
-    }
-    .btngrp3{
-        display: flex;
-        align-items:end ;
-        gap: 12px;
-        width: 500px;
+        border: 0.5px solid rgb(226, 222, 222);
+        border-radius: 5px;
     }
 
+    select {
+        padding-inline: 5px;
+        height: 55px;
+        outline: none;
+        border: 0.5px solid rgb(226, 222, 222);
+        border-radius: 5px;
+    }
 
-    .range {
+    .w-33 {
+        width: 33%;
+    }
+
+    .search-input {
         input {
-            width: 105px;
-            height: 56px;
-            border: 1px solid rgba(226, 232, 240, 1);
+            width: 100%;
             border-radius: 5px;
-            outline: none;
-            padding-left: 10px;
-            &::placeholder {
-          
-                @include place();
-            }
         }
+
+        margin-bottom: 10px;
     }
 
-    .btngrp {
+    .paginantion {
+        padding-inline-end: 20px !important;
+    }
+
+    .select-input {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 18px;
-        justify-content:space-around;
-        align-items: end;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
         margin-bottom: 10px;
 
-
-        .filter {
-            background-color: rgb(126, 15, 198);
-            color: white;
-            @include filter-reset();
+        select {
+            width: 47%;
+            border-radius: 5px;
         }
+    }
 
-        .reset {
-            background-color: rgb(249, 250, 253);
-            color: rgba(128, 141, 158, 1);
-            @include filter-reset();
-        }
+    .price-range-input {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
 
         label {
-            font-weight: 600;
+            white-space: nowrap;
         }
 
+        input {
+            width: 40%;
+            border-radius: 5px;
+        }
     }
-    .name{
-        width: 263;
+
+    .date-input {
+        input {
+            width: 99%;
+            border-radius: 5px;
+        }
     }
-    .form-group{
-        width: 23%;
-    }
-    .select{
-        width: 15%;
-    }
-    .ran{
-        width: 68%;
+
+    .filter-btn {
+        padding-top: 31px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        button {
+            width: 180px;
+            height: 55px;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .active-btn {
+            color: white;
+            background-color: rgba(126, 15, 198, 1);
+        }
     }
 }

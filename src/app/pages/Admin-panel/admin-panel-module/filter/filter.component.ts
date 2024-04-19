@@ -11,5 +11,7 @@ export class FilterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  currentActiveBtn(res: any) {
+    this.activeBtn = res
+  }   activeBtn: string = 'filter'
 }
