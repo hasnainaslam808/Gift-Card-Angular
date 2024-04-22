@@ -8,11 +8,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
 
-  baseUrl = "http://192.168.100.144:3001/api/admin/"
-  constructor( private http: HttpClient) { }
+  baseUrl = "http://192.168.100.144:3001/api/admin"
+  constructor(private http: HttpClient) { }
 
 
-  login(val:any){
-return this.http.post(this.baseUrl+"login",val)
+  login(val: any) {
+    return this.http.post(`${this.baseUrl}/login`, val)
   }
 }

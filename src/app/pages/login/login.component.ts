@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/shared/Services/http.service';
 
 @Component({
@@ -14,15 +14,15 @@ export class LoginComponent implements OnInit {
   showPassword: boolean = false;
   showPassword1: boolean = false;
   showPassword2: boolean = false;
-  constructor(private activatedRoute: ActivatedRoute ,private http:HttpService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpService) {
     this.activatedRoute.data.subscribe((data: any) => {
       this.currentRoute = data.currentRoute;
-     
+
     });
   }
 
   ngOnInit(): void {
-    
+
   }
 
   togglePasswordVisibility() {
@@ -40,20 +40,29 @@ export class LoginComponent implements OnInit {
 
 
 
-login(val:any){
-this.http.login(val).subscribe((res:any)=>{
-alert(res);
-console.log(res);
+  login(val: any) {
+    this.http.login(val).subscribe((res: any) => {
 
-}, (err:any)=>{
-     
- 
-}
-)}
-
+      if (res.data?.token) {
+        alert("Successfully logged in");
+        this.router.navigate(['/dashboard']);
+        return
+      }
+      alert(res.message)
 
 
+      console.log(res);
 
-  getPasswordValues(val:any){}
+    }, (err: any) => {
+      alert(err.message);
+      this.router.navigate([' ']);
+    }
+    )
+  }
+
+
+
+
+  getPasswordValues(val: any) { }
 
 }

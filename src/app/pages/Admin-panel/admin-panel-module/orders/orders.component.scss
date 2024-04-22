@@ -155,7 +155,19 @@ main {
 .email {
     display: flex;
     gap: 10px;
-    align-items: last baseline;
+    align-items: center;
+
+}
+.phone {
+    display: flex;
+    gap: 10px;
+    align-items:  center;
+
+}
+.location {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 
 }
 

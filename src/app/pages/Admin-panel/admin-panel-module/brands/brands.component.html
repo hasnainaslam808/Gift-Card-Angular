@@ -88,8 +88,8 @@
                         <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
                     </select>
                     <div class="parent">
-                        <div class="items" *ngFor="let item of categoryList">
-                            <li>{{item}} <span>     <button  class="close"  aria-label="Close"> <span
+                        <div class="items" *ngFor="let item of categoryList ;let i = index" >
+                            <li>{{item}} <span>     <button  class="close" (click)="removeCategory(i)" aria-label="Close"> <span
                                 aria-hidden="true">&times;</span> </button></span></li>
                         </div>
                      
@@ -97,8 +97,8 @@
                     </div>
                     <label for="color">Select Card Color</label>
                     <div class="inputs">
-                        <input type="text" id="name" placeholder="#0000000">
-                        <input type="color"  class="color">
+                        <input type="text" id="name" placeholder="#0000000" [(ngModel)]="hexColor">
+                        <input type="color" class="color" (input)="updateHexColor($event)" [(ngModel)]="hexColor">
                     </div>
                  
                 </div>

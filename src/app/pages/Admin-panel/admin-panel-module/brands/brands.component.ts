@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brands.component.scss']
 })
 export class BrandsComponent implements OnInit {
-  categories = ["Food", "Bags", "Cloth","Shoes","Perfumes"];
-  categoryList: string[] = []; 
+  categories = ["Food", "Bags", "Cloth", "Shoes", "Perfumes"];
+  categoryList: string[] = [];
+  selectedCategory: string = '';
 
-  selectedCategory: string = ''; 
+
+  hexColor: string = '#000000';
 
   tableData = [
     { images: "assets/KFC_logo.svg", brands: "KFC", BackgroundColor: 3443, totalCards: 54, assignedCategories: "Food" },
@@ -28,5 +30,17 @@ export class BrandsComponent implements OnInit {
     if (this.selectedCategory && !this.categoryList.includes(this.selectedCategory)) {
       this.categoryList.push(this.selectedCategory);
     }
+  }
+  removeCategory(index: number) {
+    if (index >= 0 && index < this.categoryList.length) {
+      this.categoryList.splice(index, 1);
+    }
+
+  }
+
+
+  updateHexColor(event: any) {
+   
+    this.hexColor = event.target.value;
   }
 }
