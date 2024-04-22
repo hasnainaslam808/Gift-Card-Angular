@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SidenavbarComponent } from './shared/components/sidenavbar/sidenavbar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,7 +24,9 @@ import { HeaderComponent } from './shared/components/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -22,7 +22,7 @@
                 <h3>Login to your Account</h3>
                 <p>Welcome back! please enter your detail</p>
 
-                <form #loginForm="">
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
                     <div class="input">
                         <img src="assets/Group.png" alt="" width="24px" height="20px">
                         <input type="text" placeholder="Email" ngModel required name="email">
@@ -44,7 +44,7 @@
                         <p><a routerLink="/reset-password">Forgot Password?</a> </p>
 
                     </div>
-                    <button class="btn" routerLink="/dashboard">Login</button>
+                    <button type="submit" class="btn" routerLink="/dashboard">Login</button>
                 </form>
 
             </div>

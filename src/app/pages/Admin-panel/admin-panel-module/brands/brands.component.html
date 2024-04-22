@@ -40,7 +40,9 @@
                     <td> {{item.BackgroundColor}}</td>
                     <td> {{item.totalCards}}</td>
 
-                    <td> <div class="category">{{item.assignedCategories}}</div></td>
+                    <td>
+                        <div class="category">{{item.assignedCategories}}</div>
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -68,7 +70,7 @@
     </div>
 
     <div class="modal fade" id="myModal">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="heading">
                     <h5 class="modal-title">Assign Categories</h5>
@@ -76,27 +78,34 @@
                             aria-hidden="true">&times;</span> </button>
                 </div>
 
-
                 <div class="modal-body">
                     <!-- Add your form inputs here -->
                     <label for="name">Brand Name</label>
-                    <input type="text" id="name" value="Khadi">
+                    <input type="text" class="brand" id="name" value="Khadi">
                     <label for="name">Categories</label>
-                    <select class="form-select select" aria-label="Default select example">
-                        <option selected>Select Category</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select class="form-select select" aria-label="Default select example" [(ngModel)]="selectedCategory" (change)="addToCategoryList()">
+                        <option selected disabled>Select Category</option>
+                        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
                     </select>
-                    <label for="color">Select Card Color</label>
-                    <input type="text" id="name" placeholder="#0000000">
+                    <div class="parent">
+                        <div class="items" *ngFor="let item of categoryList">
+                            <li>{{item}} <span>     <button  class="close"  aria-label="Close"> <span
+                                aria-hidden="true">&times;</span> </button></span></li>
+                        </div>
+                     
 
+                    </div>
+                    <label for="color">Select Card Color</label>
+                    <div class="inputs">
+                        <input type="text" id="name" placeholder="#0000000">
+                        <input type="color"  class="color">
+                    </div>
+                 
                 </div>
 
-
                 <button type="button" class="btn">Assign</button>
-
             </div>
         </div>
     </div>
+
 </main>

@@ -138,3 +138,21 @@ main {
         margin-left: 5px;
     }
 }
+@media (max-width: 1120px) {
+    .items {
+       width: 30%;
+  
+    }
+}
+@media (max-width: 820px) {
+    .items {
+       width: 45%;
+  
+    }
+}
+@media (max-width: 450px) {
+    .items {
+       width: 80%;
+  
+    }
+}
