@@ -60,6 +60,7 @@ main {
     .heading1 {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         p {
             font-size: 18px;
@@ -148,6 +149,11 @@ main {
     .items {
        width: 45%;
   
+    }
+    .graph{
+        .heading1{
+            margin: 15px 0;
+        }
     }
 }
 @media (max-width: 450px) {

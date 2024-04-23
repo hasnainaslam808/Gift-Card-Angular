@@ -38,6 +38,7 @@
     width: 95%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     border-radius: 10px;
     padding: 12px;
@@ -120,7 +121,7 @@
 
 @media (max-width: 600px) {
     .card-container {
-        margin-inline-start: 50px;
+        margin-inline-start: 20px;
     }
 }
 

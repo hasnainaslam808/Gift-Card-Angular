@@ -14,7 +14,7 @@
 // .right {
 //     flex: 1; 
 //     overflow-x: auto; 
-  
+
 // }
 
 // .top {
@@ -24,40 +24,51 @@
 // }
 
 // .bottom {
- 
+
 //     background-color: rgb(245, 246, 247);
 // }
-.main-container{
+.main-container {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     overflow: hidden;
-    .left{
+
+    .left {
         width: 15%;
     }
-    .right{
+
+    .right {
         width: 85%;
         height: 100vh;
 
         overflow-y: auto;
     }
- 
-    .login-layout{
-        width: 100%!important;
+
+    .login-layout {
+        width: 100% !important;
     }
+
     // .content-layout{
     //     width: min(100%,1600px);
     //     margin: auto;
     // }
 }
+@media screen and (min-width: 981px) and (max-width: 1220px) {
+    .left{
+      width: 19% !important;
+    }
+  
+  }
 @media screen and (min-width: 300px) and (max-width: 980px) {
     .right {
-  
-      width: 100% !important;
+
+        width: 100% !important;
     }
-    .left{
-        display: none ;
+
+    .left {
+        display: none;
     }
 }
+
