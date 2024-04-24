@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/shared/Services/http.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   showPassword: boolean = false;
   showPassword1: boolean = false;
   showPassword2: boolean = false;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpService,private toastr: ToastrService) {
     this.activatedRoute.data.subscribe((data: any) => {
       this.currentRoute = data.currentRoute;
 
@@ -44,17 +45,17 @@ export class LoginComponent implements OnInit {
     this.http.login(val).subscribe((res: any) => {
 
       if (res.data?.token) {
-        alert("Successfully logged in");
+        this.toastr.success('successfully logged In!');
         this.router.navigate(['/dashboard']);
         return
       }
-      alert(res.message)
+    this.toastr.error(res.message);
 
 
       console.log(res);
 
     }, (err: any) => {
-      alert(err.message);
+      this.toastr.error(err.message);
       this.router.navigate([' ']);
     }
     )
@@ -63,10 +64,10 @@ export class LoginComponent implements OnInit {
 // email verification
 emailverification(val: string) {
 this.http.emailverification(val).subscribe((res: any) => {
-alert(res.message);
+this.toastr.warning(res.message);
 this.router.navigate(['/emial-verification']);
 }, (err: any) => {
-alert(err.message);
+this.toastr.error( err.message);
 });
 }
 

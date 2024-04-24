@@ -8,6 +8,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { SidenavbarComponent } from './shared/components/sidenavbar/sidenavbar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -26,6 +28,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   
   ],
   providers: [],
