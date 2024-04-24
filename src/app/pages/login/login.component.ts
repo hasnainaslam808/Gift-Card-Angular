@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
       if (res.data?.token) {
         this.toastr.success('successfully logged In!');
         this.router.navigate(['/dashboard']);
+        localStorage.setItem('user-set',res.data.token);
         return
       }
     this.toastr.error(res.message);

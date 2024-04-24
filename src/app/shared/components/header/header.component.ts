@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
  
  
   @Output('sideNvaBarToggle') sideNvaBarToggle:any = new EventEmitter<void>();
@@ -19,6 +20,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  logout(){
+    localStorage.removeItem('user-set');
+    this.router.navigate(['/login']);
+
+  }
+
+
+
 //   closeOffcanvas() {
 //     const offcanvasElement = document.getElementById('offcanvasWithBackdrop');
 //     const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
