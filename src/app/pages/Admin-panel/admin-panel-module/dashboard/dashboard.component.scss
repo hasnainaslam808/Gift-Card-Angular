@@ -17,6 +17,7 @@ main {
 .items {
     width: 24%;
     background-color: white;
+    border-radius: 10px;
 
     img {
         color: rgb(126, 15, 198);
@@ -107,7 +108,7 @@ main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 5px;
+        gap: 12px;
         margin-inline: 9px;
 
         button {

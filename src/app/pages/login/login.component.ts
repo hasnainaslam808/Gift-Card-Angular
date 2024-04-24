@@ -60,9 +60,23 @@ export class LoginComponent implements OnInit {
     )
   }
 
+// email verification
+emailverification(val: string) {
+this.http.emailverification(val).subscribe((res: any) => {
+alert(res.message);
+this.router.navigate(['/emial-verification']);
+}, (err: any) => {
+alert(err.message);
+});
+}
 
 
+  getPasswordValues(val: any) {
+    this.http.newPassword(val).subscribe((res: any) =>{
+      
+    }, (err: any) =>{
 
-  getPasswordValues(val: any) { }
+    });
+   }
 
 }
