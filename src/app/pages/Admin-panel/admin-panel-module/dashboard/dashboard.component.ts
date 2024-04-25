@@ -8,8 +8,8 @@ import { ChartType } from 'angular-google-charts';
 export class DashboardComponent implements OnInit {
 
 cards=[
-  {img:'assets/img p.png',title:"Total Users",price:'212k'},
-  {img:'assets/8.svg',title:"Blocked Users",price:'312k'},
+  // {img:'assets/img p.png',title:"Total Users",price:'212k'},
+  // {img:'assets/8.svg',title:"Blocked Users",price:'312k'},
   {img:'assets/3.svg',title:"No of Cards",price:'948'},
   {img:'assets/4.svg',title:"Total Revenue",price:'$474'},
   {img:'assets/5.svg',title:"Returned Cards",price:'233'},

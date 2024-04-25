@@ -10,10 +10,12 @@
 :root {
     --popins: 'Poppins', sans-serif;
     --inter-font: "Inter", sans-serif;
+    
 }
 .pagination .ngx-pagination .current{
     background-color: rgb(126, 15, 198)!important;
 }
+
 body {
     font-family: var(--inter-font);
     overflow: hidden;
