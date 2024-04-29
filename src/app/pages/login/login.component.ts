@@ -10,12 +10,14 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  token: string = '';
   currentRoute: string = ''
   password: string = '';
   showPassword: boolean = false;
   showPassword1: boolean = false;
   showPassword2: boolean = false;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpService,private toastr: ToastrService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpService, private toastr: ToastrService) {
     this.activatedRoute.data.subscribe((data: any) => {
       this.currentRoute = data.currentRoute;
 
@@ -23,6 +25,22 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+       this.token = params['token'];
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   }
 
@@ -47,10 +65,10 @@ export class LoginComponent implements OnInit {
       if (res.data?.token) {
         this.toastr.success('successfully logged In!');
         this.router.navigate(['/dashboard']);
-        localStorage.setItem('user-set',res.data.token);
+        localStorage.setItem('user-set', res.data.token);
         return
       }
-    this.toastr.error(res.message);
+      this.toastr.error(res.message);
 
 
       console.log(res);
@@ -62,23 +80,45 @@ export class LoginComponent implements OnInit {
     )
   }
 
-// email verification
-emailverification(val: string) {
-this.http.emailverification(val).subscribe((res: any) => {
-this.toastr.warning(res.message);
-this.router.navigate(['/emial-verification']);
-}, (err: any) => {
-this.toastr.error( err.message);
-});
-}
+  // email verification
+  emailverification(val: string) {
+    this.http.emailverification(val).subscribe((res: any) => {
+      this.toastr.warning(res.message);
+      this.router.navigate(['/emial-verification']);
+    }, (err: any) => {
+      this.toastr.error(err.message);
+    });
+  }
 
 
   getPasswordValues(val: any) {
-    this.http.newPassword(val).subscribe((res: any) =>{
+    const data = {
+      token: this.token,
+      password: val
+    };
+    this.http.newPassword(data).subscribe((res: any) => {
+      if (res.status) {
+        this.toastr.success(res.message);
+        this.router.navigate(['/dashboard']);
+      }
+      else{
+        this.toastr.error(res.message);
       
-    }, (err: any) =>{
+      }
+    }, (err: any) => {
+      this.toastr.error(err.message);
+      console.log(err.errors);
 
     });
-   }
+  }
+
+
+
+
+
+
+
+
+
 
 }

@@ -35,6 +35,8 @@ public chartData: any;
     ['Feb8',  7000],  
     ['Feb9',  5000],
     ['Feb12',  7000],
+    ['Feb14',  5000],
+    ['Feb16',  7000],
   ];
 
   constructor() { }

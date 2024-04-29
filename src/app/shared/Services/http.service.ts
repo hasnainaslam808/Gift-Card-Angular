@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
 
-  baseUrl = "http://192.168.100.157:3001/api/admin"
+  baseUrl = "http://192.168.100.200:3001/api/admin"
   constructor(private http: HttpClient) { }
 
 
@@ -16,9 +16,9 @@ export class HttpService {
     return this.http.post(`${this.baseUrl}/login`, val)
   }
   emailverification(val: any) {
-    return this.http.post(`${this.baseUrl}/email-verify`, val)
+    return this.http.post(`${this.baseUrl}/forgot-password`, val)
   }
   newPassword(val: any) {
-    return this.http.post(`${this.baseUrl}/new-password`, val)
+    return this.http.post(`${this.baseUrl}/reset-password`, val)
   }
 }

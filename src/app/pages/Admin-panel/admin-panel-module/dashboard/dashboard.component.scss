@@ -40,7 +40,7 @@ main {
     }
 
     #arrow {
-        margin-right: 10px;
+        margin-right: 25px;
     }
 
 }
@@ -146,14 +146,19 @@ main {
 }
 @media (max-width: 1120px) {
     .items {
-       width: 30%;
-  
+       width: 30%;  
+    }
+    .first{
+    width: 64% !important;
     }
 }
 @media (max-width: 820px) {
     .items {
        width: 45%;
   
+    }
+    .first{
+        width: 95% !important;
     }
     .graph{
         .heading1{
@@ -165,5 +170,8 @@ main {
     .items {
        width: 80%;
   
+    }
+    .first{
+        width: 80% !important;
     }
 }

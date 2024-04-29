@@ -6,6 +6,7 @@ import { SettingComponent } from './pages/Admin-panel/admin-panel-module/setting
 const routes: Routes = [
 
   { path: '', component: LoginComponent, data: { currentRoute: 'login', header: false } },
+
   { path: 'login', component: LoginComponent, data: { currentRoute: 'login', header: false } },
   { path: 'reset-password', component: LoginComponent, data: { currentRoute: 'reset-password', header: false } },
   { path: 'emial-verification', component: LoginComponent, data: { currentRoute: 'emial-verification', header: false } },

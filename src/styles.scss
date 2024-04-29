@@ -20,7 +20,12 @@ body {
     font-family: var(--inter-font);
     overflow: hidden;
 }
-
-.google-chart svg g rect{
-    display: none!important;
+.google-chart {
+    width: 100% !important;
+    svg g rect {
+        display: none !important;
+    }
+    svg g circle {
+        fill-opacity: 1 !important;
+    }
 }
